@@ -37,10 +37,10 @@ The focus throughout is investigative methodology over tool memorisation — the
 
 **Tools & Environment**
 
-Microsoft Sentinel
+**SIEM:** Microsoft Sentinel
 
-Microsoft Defender for Endpoint
+**EDR:** Microsoft Defender for Endpoint
 
-Query Language	KQL (Kusto Query Language)
+**Query Language:** KQL (Kusto Query Language)
 
-Log Sources	Microsoft 365 Unified Audit Logs, Sysmon, Windows Event Logs
+**Log Sources:** Microsoft 365 Unified Audit Logs, Sysmon, Windows Event Logs
