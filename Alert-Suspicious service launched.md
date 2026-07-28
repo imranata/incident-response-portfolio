@@ -42,9 +42,7 @@ nssm.exe, which Microsoft Defender flagged as "Suspicious service launched."
 •  There is evidence of persistence through a Windows service (T1569.002 – Service Execution).
 •  CalderaAgent detected due to an authorized red-team emulation exercise using MITRE CALDERA.
 
-•  Tuning the alert is not recommended as an attacker may use CALDERA or a similarly named
-
-service to maintain persistence.
+•  Tuning the alert is not recommended as an attacker may use CALDERA or a similarly named service to maintain persistence.
 
 •  Alert closed off
 
