@@ -1,30 +1,34 @@
-Alert: Suspicious service launched
+**Alert:** Suspicious service launched
 
-Endpoint: ec2amaz-9oh9aqq
+**Endpoint:** ec2amaz-9oh9aqq
 
-User: NT SERVICE\himds
+**User:** NT SERVICE\himds
 
-OS: WindowsServer2022
+**OS:** WindowsServer2022
 
-Verdict: True positive
+**Verdict:** True positive
 
-The alert tuning rule to hide a specific alert usually means an Exclusion (allowlist override).
+<img width="940" height="691" alt="image" src="https://github.com/user-attachments/assets/80dccca2-735c-4dbc-95ff-d48976498e38" />
 
-Why was the alert triggered?
 
-System's behavioural analysis or threat intelligence matched a running process against SandCat—
+<img width="531" height="1047" alt="image" src="https://github.com/user-attachments/assets/d16397b6-e52d-4e38-acf0-f6feb761dddd" />
 
-which is the default agent name for Caldera, an open-source adversary emulation platform created
+
+The alert tuning rule to hide a specific alert usually means an Exclusion (allowlist override). 
 
-by MITRE.
+**Why was the alert triggered?**
 
-This behaviour aligns with MITRE ATT&CK technique T1003.001 (LSASS Credential Dumping),
+System's behavioural analysis or threat intelligence matched a running process against SandCat— which is the default agent name for Caldera, an open-source adversary emulation platform created by MITRE.
 
-which is why Defender generating a Credential Access alert.
+This behaviour aligns with MITRE ATT&CK technique T1003.001 (LSASS Credential Dumping), which is why Defender generating a Credential Access alert.
 
-Investigation Findings
+**Investigation Findings**
 
-Conclusion:
+ 
+<img width="710" height="727" alt="image" src="https://github.com/user-attachments/assets/d5e9372c-3a03-411d-acf7-d9b95d3da74f" />
+
+
+**Conclusion:**
 
 •  The process tree is mostly composed of legitimate Windows, AWS, Azure, and Microsoft
 
@@ -35,11 +39,8 @@ Defender processes.
 nssm.exe, which Microsoft Defender flagged as "Suspicious service launched."
 
 •  There is no direct evidence that malware or ransomware executed.
-•  There is evidence of persistence through a Windows service (T1569.002 – Service
-•  Execution).
-•  CalderaAgent detected due to an authorized red-team emulation exercise using MITRE
-
-CALDERA.
+•  There is evidence of persistence through a Windows service (T1569.002 – Service Execution).
+•  CalderaAgent detected due to an authorized red-team emulation exercise using MITRE CALDERA.
 
 •  Tuning the alert is not recommended as an attacker may use CALDERA or a similarly named
 
