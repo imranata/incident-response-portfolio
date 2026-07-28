@@ -27,11 +27,20 @@ A process registered a suspicious command or file in ASEP registry key, where it
 
 ## Investigation Summary
 
-Microsoft Defender for Endpoint generated a high-severity alert for Anomaly detected in ASEP registry on ec2amaz-9oh9aqq. Investigation identified powershell.exe executing with - ExecutionPolicy Bypass to modify the registry key HKCU\Software\Classes\ms- settings\Shell\Open\command, create the DelegateExecute value, and launch fodhelper.exe. This sequence is consistent with the Fodhelper UAC bypass technique used to escalate privileges.
+Microsoft Defender for Endpoint generated a high-severity alert for Anomaly detected in ASEP registry on ec2amaz-9oh9aqq. 
 
-The activity originated from the suspicious executable C:\Users\Public\wusvc.exe, which communicated with 172.31.2.203:8888 and was detected by Microsoft Defender as Trojan:Win64/SandCat!rfn. Defender also detected Behavior:Win32/UACBypassExp.T!gen and successfully blocked and remediated the malicious behaviour. The alert is assessed as a True
+Investigation identified powershell.exe executing with execution Policy Bypass to modify the registry key: **HKCU\Software\Classes\ms-settings\Shell\Open\command**
 
-Positive indicating attempted Privilege Escalation, Persistence, and Defense Evasion.
+Created the DelegateExecute value and launch **fodhelper.exe**.
+  
+
+This sequence is consistent with the **Fodhelper UAC bypass** technique used to escalate privileges.
+
+The activity originated from the suspicious executable C:\Users\Public\wusvc.exe, which communicated with 172.31.2.203:8888 and was detected by Microsoft Defender as Trojan:Win64/SandCat!rfn. 
+
+Defender also detected Behavior:Win32/UACBypassExp.T!gen and successfully blocked and remediated the malicious behaviour. 
+
+The alert is assessed as a True Positive indicating attempted Privilege Escalation, Persistence, and Defense Evasion.
 
 ## MITRE ATT&CK:
 
