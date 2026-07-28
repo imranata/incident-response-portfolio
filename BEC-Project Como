@@ -1,0 +1,86 @@
+Executive Summary 
+
+
+A Business Email Compromise (BEC) incident was investigated involving the Microsoft 365 account of 
+Natasha Romanenko. Audit logs identified successful logins from Switzerland, despite the user 
+residing in Melbourne and having no history of overseas travel or VPN usage. 
+Following authentication, the threat actor accessed SharePoint resources, viewed and downloaded files, and used the compromised mailbox to facilitate a fraudulent payment request sent to ACME Pty Ltd. 
+
+
+Scope 
+• User: Natasha Romanenko  
+• Environment: Microsoft 365  
+• Evidence (Signin Logs, Message Trace, Mailbox PST): 
+
+
+
+Findings: 
+
+Initial Access 
+
+Normal login: 
+
+49.185.122.38   Australia 
+
+
+First unauthorized login observed on 8 June 2026 from Swiss IP addresses:
+
+85.204.124.83 
+
+85.204.124.84 
+
+85.204.124.85 
+
+85.204.124.86 
+
+
+Threat Activity 
+
+• Successful authentication. 
+
+• SharePoint browsing.
+
+• File access.  
+
+• File downloads.
+
+• Mailbox compromise.
+
+• Fraudulent payment request.  
+
+
+Data Exposure 
+Audit records containing FileDownloaded indicate that corporate files were downloaded, suggesting likely data exfiltration. 
+
+
+Business Impact 
+• Potential financial fraud. 
+
+• Exposure of sensitive business information. 
+
+• Reputational risk.  
+
+• Third-party compromise.  
+
+
+Root Cause 
+
+The investigation indicates compromise of valid Microsoft 365 credentials. While the exact acquisition method cannot be proven from the available evidence, phishing or credential theft is a plausible explanation and should be treated as a hypothesis rather than a confirmed finding. 
+
+
+Recommendations 
+
+• Reset credentials and revoke active sessions. 
+
+• Enforce phishing-resistant MFA.  
+
+• Review mailbox rules and delegated access.  
+
+• Notify affected third parties.  
+
+• Perform a wider threat hunt for related indicators.
+
+• Monitor for further suspicious sign-in activity. 
+
+• Review downloaded files for sensitivity and disclosure obligations. 
+
