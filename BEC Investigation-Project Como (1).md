@@ -104,6 +104,11 @@ plausible explanation and should be treated as a hypothesis rather than a confir
 
 •  Monitor for further suspicious sign-in activity.
 
+
+
+<img width="940" height="485" alt="image" src="https://github.com/user-attachments/assets/4d4c4b46-880c-492a-9004-836769c00812" />
+
+
 •  Review downloaded files for sensitivity and disclosure obligations.
 
 
