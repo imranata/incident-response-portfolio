@@ -43,14 +43,7 @@ The investigations here demonstrate practical ability in:
 | 001 | Anomaly detected in ASEP registry| 
 | 002 | Suspicious service launched|
 | 003 | Attempt to clear event log|
-| 004 | Mimikatz credential theft tool |
-| 005 | Potential human-operated malicious activity|
-
-### Case Drops
-
-| # | Case Name |
-|---|---|
-| 001 | Project Como|
+| 004 | Mimikatz credential theft tool|
 
 ---
 
