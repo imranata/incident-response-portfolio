@@ -8,6 +8,10 @@ OS: WindowsServer2022
 
 Verdict: True positive
 
+<img width="606" height="433" alt="image" src="https://github.com/user-attachments/assets/343b397d-b5a7-4d92-8bed-69bec352c4eb" />
+
+
+
 ## Command Line:
 
 ## Some of command are:
