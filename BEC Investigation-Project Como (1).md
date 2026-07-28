@@ -1,4 +1,4 @@
-Executive Summary
+**Executive Summary**
 
 A Business Email Compromise (BEC) incident was investigated involving the Microsoft 365 account of
 Natasha Romanenko. Audit logs identified successful logins from Switzerland, despite the user
@@ -6,7 +6,7 @@ residing in Melbourne and having no history of overseas travel or VPN usage. Fol
 authentication, the threat actor accessed SharePoint resources, viewed and downloaded files, and
 used the compromised mailbox to facilitate a fraudulent payment request sent to ACME Pty Ltd.
 
-Scope
+**Scope**
 
 •  User: Natasha Romanenko
 
@@ -14,45 +14,32 @@ Scope
 
 •  Evidence (Signin Logs, Message Trace, Mailbox PST):
 
-1
+<img width="940" height="494" alt="image" src="https://github.com/user-attachments/assets/348dedc4-e3c5-4f33-8181-d1d7ce9e210e" />
 
-Findings:
 
-Time
 
-08:46
 
-08:48
+<img width="940" height="464" alt="image" src="https://github.com/user-attachments/assets/0316aaa4-3bc5-4adf-896b-448ca731a0a6" />
 
-08:48
 
-08:48
+
+ 
+ 
+ **Findings:**
 
-Later
 
-Activity
+<img width="309" height="254" alt="image" src="https://github.com/user-attachments/assets/9679ab2e-363b-4559-bb72-4fb60982227b" />
 
-Malicious login
 
-SharePoint browsing
 
-Files accessed
 
-Files downloaded
+**Initial Access**
 
-Fraudulent payment request sent
+**Normal login:**
 
-After discovery  Account remediated
+49.185.122.38  Australia
 
-Initial Access
-
-Normal login:
-
-49.185.122.38
-
-Australia
-
-First unauthorized login observed on 8 June 2026 from Swiss IP addresses:
+**First unauthorized login observed on 8 June 2026 from Swiss IP addresses:**
 
 85.204.124.83
 
@@ -62,44 +49,62 @@ First unauthorized login observed on 8 June 2026 from Swiss IP addresses:
 
 85.204.124.86
 
-Threat Activity
+
+
+**Threat Activity**
 
 •  Successful authentication.
+
 •  SharePoint browsing.
+
 •  File access.
+
 •  File downloads.
+
 •  Mailbox compromise.
+
 •  Fraudulent payment request.
 
-Data Exposure
+
+**Data Exposure**
 
 Audit records containing FileDownloaded indicate that corporate files were downloaded, suggesting
 likely data exfiltration.
 
-Business Impact
+**Business Impact**
 
 •  Potential financial fraud.
+
 •  Exposure of sensitive business information.
+
 •  Reputational risk.
+
 •  Third-party compromise.
 
-2
 
-Root Cause
+
+
+**Root Cause**
 
 The investigation indicates compromise of valid Microsoft 365 credentials. While the exact
 acquisition method cannot be proven from the available evidence, phishing or credential theft is a
 plausible explanation and should be treated as a hypothesis rather than a confirmed finding.
 
-Recommendations
+**Recommendations**
 
 •  Reset credentials and revoke active sessions.
+
 •  Enforce phishing-resistant MFA.
+
 •  Review mailbox rules and delegated access.
+
 •  Notify affected third parties.
+
 •  Perform a wider threat hunt for related indicators.
+
 •  Monitor for further suspicious sign-in activity.
+
 •  Review downloaded files for sensitivity and disclosure obligations.
 
-3
+
 
