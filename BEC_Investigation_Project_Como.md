@@ -143,7 +143,7 @@ A search for invoice-related correspondence identified the email chain associate
 
 
 
-####Facilitation of the Payment Fraud** 
+#### **Facilitation of the Payment Fraud** 
 
 The payment fraud was enabled through four connected actions: 
 
@@ -235,15 +235,6 @@ The following IP addresses were included in the threat-hunting list:
 |54.79.179.92|Australia|Sydney (AWS IP ranges)|
 
 
-
-SOC Simulation Project 
-
-Page 6 
-
-**WDLABS | PROJECT COMO** 
-
-BEC INVESTIGATION REPORT 
-
 #### **Lessons Learned** 
 
 The first priority in an active account compromise is containment. Detailed analysis should begin only after the account has been disabled, the password has been reset and all active and MFA sessions have been revoked. 
@@ -261,4 +252,134 @@ Browser history should be requested early in a suspected phishing investigation.
 Microsoft Purview eDiscovery was used to obtain a PST copy of Natasha's mailbox. Autopsy was then used to search the acquired mailbox, examine the invoice correspondence and reconstruct the sequence of legitimate and malicious messages. 
 
 It shows the value of alerts for inbox-rule creation, abnormal sign-ins, unusual mailbox access and bulk file downloads. The attacker's rule and file-download activity showed that the incident extended beyond a single suspicious login. 
+
+#### **Appendix**
+Invoice Search in Autopsy:
+<img width="940" height="496" alt="image" src="https://github.com/user-attachments/assets/43f9a383-4207-43df-b35f-c106ad64beac" />
+
+<img width="940" height="497" alt="image" src="https://github.com/user-attachments/assets/08828c83-c9b5-4f2c-baa6-eaeaf1ead310" />
+
+<img width="940" height="531" alt="image" src="https://github.com/user-attachments/assets/0071bab9-750e-4acd-932b-b4fdf226e83c" />
+
+<img width="940" height="498" alt="image" src="https://github.com/user-attachments/assets/c6457bea-0c29-4339-b712-67af4ce0e067" /> 
+
+---
+
+Relevant Emails:
+
+No 1- Legitimate: Natasha to ACME
+
+<img width="940" height="281" alt="image" src="https://github.com/user-attachments/assets/22085a9f-1598-4bd9-a530-34d05b53b076" />
+<img width="675" height="987" alt="image" src="https://github.com/user-attachments/assets/b26f38ec-ccbd-4c50-a5b9-7c305cab3138" />
+
+
+No 2 - Malicious: Natasha to ACME
+
+<img width="940" height="471" alt="image" src="https://github.com/user-attachments/assets/6284dacf-83be-49d1-bbba-2d2c625eae49" />
+<img width="940" height="856" alt="image" src="https://github.com/user-attachments/assets/29e53528-423f-477b-9a5a-0ae05840f1ca" />
+
+
+No 3- Legitimate: ACME to Natasha
+
+<img width="940" height="358" alt="image" src="https://github.com/user-attachments/assets/92304401-455b-4b4d-acc9-0cf9411252d0" />
+
+
+No 4 - Malicious: Natasha to ACME
+
+<img width="940" height="275" alt="image" src="https://github.com/user-attachments/assets/1db7e7fc-08c5-4c37-886b-2450bba05103" />
+
+
+N0 5- Legitimate: Natasha to ACME
+
+<img width="940" height="350" alt="image" src="https://github.com/user-attachments/assets/50ee89d5-f03d-4454-98db-1e7ce8005274" />
+
+
+---
+
+KQL Queries:
+
+
+Malicious logs:
+
+let badIPs = dynamic([
+"37.140.254.32","173.239.216.150","85.204.124.86","85.204.124.84","85.204.124.85","85.204.124.83","200.162.146.87,"37.140.254.42","37.140.254.43","200.162.146.253","200.162.146.109","200.162.146.203","200.162.146.129", "54.79.179.92"
+]);
+
+OfficeActivity
+
+| extend AADSessionId = tostring(parse_json(AppAccessContext).AADSessionId)
+
+| where UserId == "natasha.romanenko@wdlabs.com.au"
+
+| where ClientIP in (badIPs)
+    or AADSessionId == "005ccdea-964a-c068-181e-c9402d6df272"
+
+| sort by TimeGenerated asc
+
+<img width="940" height="448" alt="image" src="https://github.com/user-attachments/assets/5be3ff14-fb17-418a-9c79-853776484de6" />
+
+
+Search by Operation:
+
+let badIPs = dynamic([
+"37.140.254.32","173.239.216.150","85.204.124.86","85.204.124.84","85.204.124.85","85.204.124.83","200.162.146.87,"37.140.254.42","37.140.254.43","200.162.146.253","200.162.146.109","200.162.146.203","200.162.146.129", "54.79.179.92"    
+]);
+
+OfficeActivity
+
+| extend AADSessionId = tostring(parse_json(AppAccessContext).AADSessionId)
+
+| where UserId == "natasha.romanenko@wdlabs.com.au"
+
+| where ClientIP in (badIPs) or AADSessionId == "005ccdea-964a-c068-181e-c9402d6df272"
+
+|summarize count() by Operation
+
+|sort by count_
+
+
+
+
+<img width="1039" height="504" alt="image" src="https://github.com/user-attachments/assets/ec7998c4-53ee-458a-ad2a-74e16d604193" />
+
+
+
+
+Bulk IP Check:
+
+
+<img width="1064" height="546" alt="image" src="https://github.com/user-attachments/assets/fc853058-f676-44df-bd84-3375875fbb9a" /> 
+
+<img width="1064" height="571" alt="image" src="https://github.com/user-attachments/assets/083df202-334f-42f2-a4d4-7c748389a5e2" />
+
+
+
+Further IP Check:
+
+
+
+<img width="1064" height="616" alt="image" src="https://github.com/user-attachments/assets/e5ef6fd7-c4fa-45da-9c1a-8a67fda084e9" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
