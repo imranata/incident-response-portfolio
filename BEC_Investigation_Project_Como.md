@@ -207,7 +207,7 @@ The order of the password reset and session revocation was important. Resetting 
 |Phishingsender|bbenson17891@outlook.com|Sender of June Remittance Advice|
 |Phishing subject|June Remittance Advice|Initial phishing message|
 |Confirmed initial IP|54.79.179.92|First unauthorised sign-in and associated<br>phishing evidence|
-|Malicious session ID|005ccdea-964a-c068-181-c9402d6df272|Used to correlate Microsoft 365 activity|
+|Malicious session ID|005ccdea-964a-c068-181e-c9402d6df272|Used to correlate Microsoft 365 activity|
 |Inbox rule|.|Moved selected messages to Conversation<br>History|
 |Fraud-related subject|R e : Invoice WDL-2026-0048|Used in unauthorised sent messages|
 |Ruleaddress|acmebusiness@gmail.com|Original rule condition|
@@ -302,7 +302,7 @@ KQL Queries:
 Malicious logs:
 
 let badIPs = dynamic([
-"37.140.254.32","173.239.216.150","85.204.124.86","85.204.124.84","85.204.124.85","85.204.124.83","200.162.146.87,"37.140.254.42","37.140.254.43","200.162.146.253","200.162.146.109","200.162.146.203","200.162.146.129", "54.79.179.92"
+"37.140.254.32","173.239.216.150","85.204.124.86","85.204.124.84","85.204.124.85","85.204.124.83","200.162.146.87","37.140.254.42","37.140.254.43","200.162.146.253","200.162.146.109","200.162.146.203","200.162.146.129", "54.79.179.92"
 ]);
 
 OfficeActivity
@@ -322,7 +322,7 @@ OfficeActivity
 Search by Operation:
 
 let badIPs = dynamic([
-"37.140.254.32","173.239.216.150","85.204.124.86","85.204.124.84","85.204.124.85","85.204.124.83","200.162.146.87,"37.140.254.42","37.140.254.43","200.162.146.253","200.162.146.109","200.162.146.203","200.162.146.129", "54.79.179.92"    
+"37.140.254.32","173.239.216.150","85.204.124.86","85.204.124.84","85.204.124.85","85.204.124.83","200.162.146.87","37.140.254.42","37.140.254.43","200.162.146.253","200.162.146.109","200.162.146.203","200.162.146.129", "54.79.179.92"    
 ]);
 
 OfficeActivity
