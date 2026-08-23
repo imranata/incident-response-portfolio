@@ -19,15 +19,15 @@ WDLabs // Microsoft 365 UAL Investigation
 
 A Business Email Compromise incident affected Natasha Romanenko's Microsoft 365 account. 
 
-At 08:08:00 GMT on 8 June 2026, Natasha received an email from b b e n s o n 1 7 8 9 1 @ o u t l o o k . c o m with the subject June Remittance Advice. The message was delivered to her Junk Email folder. Natasha accessed it at 08:10:08 GMT. 
+At 08:08:00 GMT on 8 June 2026, Natasha received an email from bbenson17891@outlook.com with the subject June Remittance Advice. The message was delivered to her Junk Email folder. Natasha accessed it at 08:10:08 GMT. 
 
-At 08:12:49 GMT, approximately two minutes and forty-one seconds after the message was accessed, the first confirmed unauthorised sign-in occurred from 5 4 . 7 9 . 1 7 9 . 9 2 . This sequence supports credential phishing as the initial access method. Browser history was not available to confirm whether Natasha selected a link or entered her credentials into a phishing page. 
+At 08:12:49 GMT, approximately two minutes and forty-one seconds after the message was accessed, the first confirmed unauthorised sign-in occurred from 54.79.179.92 . This sequence supports credential phishing as the initial access method. Browser history was not available to confirm whether Natasha selected a link or entered her credentials into a phishing page. 
 
 After gaining access, the threat actor accessed 30 mailbox items and downloaded 62 files from Microsoft 365 resources. The actor remained active until 12 June 2026. 
 
 On 10 June at 13:02:51 GMT, the actor created an inbox rule named . to move messages associated with ACME Pty Ltd into the Conversation History folder. The rule reduced the likelihood that Natasha would see correspondence relating to the fraudulent payment request. 
 
-The actor then used Natasha's mailbox and an existing invoice conversation to send unauthorised emails concerning invoice W D L - 2 0 2 6 - 0 0 4 8 . Examination of the acquired mailbox identified a five-message chain containing three legitimate messages and two malicious messages. 
+The actor then used Natasha's mailbox and an existing invoice conversation to send unauthorised emails concerning invoice WDL-2026-0048 . Examination of the acquired mailbox identified a five-message chain containing three legitimate messages and two malicious messages. 
 
 ACME acted on a change-of-payment-details request that appeared to come from Natasha. The incident was discovered after ACME received a fraudulent payment notification from its bank. Sarah Mitchell contacted Natasha by phone, and Natasha confirmed that she had not requested any change to the payment details. 
 
@@ -41,17 +41,17 @@ All timestamps are in GMT.
 
 |**Time**|**Activity**|**Detail**|
 |---|---|---|
-|2026-06-08 08:08:00|Phishing email received|Email fromb b e n s o n 1 7 8 9 1 @ o u t l o o k . c o m with the subject June<br>Remittance Advice was delivered to Natasha's Junk Email folder.|
+|2026-06-08 08:08:00|Phishing email received|Email from bbenson17891@outlook.com with the subject June<br>Remittance Advice was delivered to Natasha's Junk Email folder.|
 |2026-06-08 08:10:08|Phishing email accessed|The message was accessed by the legitimate mailbox user.|
-|2026-06-08 08:12:49|Initial unauthorised access|First confirmed unauthorised sign-in from5 4 . 7 9 . 1 7 9 . 9 2. The<br>application used was not identified in the supplied evidence.|
+|2026-06-08 08:12:49|Initial unauthorised access|First confirmed unauthorised sign-in from 54.79.179.92|
 |2026-06-08 08:47:40 to<br>2026-06-12 08:55:57|Mailbox access|During malicious mailbox activity a total of 30 mail items were<br>accessed.|
 |2026-06-08 08:48:27|File downloads began|Start of a download sequence involving 62 files.|
 |2026-06-08 09:13:33|File downloads ended|The 62-file download sequence ended.|
-|2026-06-10 13:02:51|Inbox rule created|Rule  named. created  to  move messages  from<br>a c m e b u s i n e s s @ g m a i l . c o mto the Conversation History folder. This<br>corresponds to 23:02:51 AEST.|
-|2026-06-10 13:12:34|Malicious email sent|Email sent from Natasha's mailbox toa c m e b u s i n e s s 2 0 2 6 @ g m a i l . c o m <br>with the subject Re: Invoice WDL-2026-0048.|
-|2026-06-10 13:14:04|Inbox rule modified|Rule condition changed froma c m e b u s i n e s s @ g m a i l . c o m to<br>a c m e b u s i n e s s 2 0 2 6 @ g m a i l . c o m .|
+|2026-06-10 13:02:51|Inbox rule created|Rule  named "." created  to  move messages  from <br> acmebusiness@gmail.com to the Conversation History folder. This<br>corresponds to 23:02:51 AEST.|
+|2026-06-10 13:12:34|Malicious email sent|Email sent from Natasha's mailbox to  acmebusiness2026@gmail.com <br>with the subject Re: Invoice WDL-2026-0048.|
+|2026-06-10 13:14:04|Inbox rule modified|Rule condition changed from acmebusiness@gmail.com to<br> acmebusiness2026@gmail.com .|
 |2026-06-12 08:55:57|Last identified mailbox<br>access|End of the period in which 30 mailbox items were accessed.|
-|2026-06-12 08:56:05|Second malicious email<br>sent|Another email was sent toa c m e b u s i n e s s 2 0 2 6 @ g m a i l . c o m with the<br>subject Re: Invoice WDL-2026-0048.|
+|2026-06-12 08:56:05|Second malicious email<br>sent|Another email was sent to acmebusiness2026@gmail.com with the<br>subject Re: Invoice WDL-2026-0048.|
 
 
 
@@ -61,9 +61,9 @@ All timestamps are in GMT.
 
 The initial access vector was most likely a credential-phishing email. 
 
-The phishing message was sent from b b e n s o n 1 7 8 9 1 @ o u t l o o k . c o m with the subject June Remittance Advice. It appeared to use a shared-file or remittance-document lure. Although the message was placed in Junk Email, it remained available to the user and was accessed at 08:10:08 GMT. 
+The phishing message was sent from bbenson17891@outlook.com with the subject June Remittance Advice. It appeared to use a shared-file or remittance-document lure. Although the message was placed in Junk Email, it remained available to the user and was accessed at 08:10:08 GMT. 
 
-The first confirmed malicious sign-in occurred at 08:12:49 GMT from 5 4 . 7 9 . 1 7 9 . 9 2 . The short interval between the email access and unauthorised sign-in, together with the matching IP evidence, supports the assessment that the email led to the account compromise. 
+The first confirmed malicious sign-in occurred at 08:12:49 GMT from (54.79.179.92). The short interval between the email access and unauthorised sign-in, together with the matching IP evidence, supports the assessment that the email led to the account compromise. 
 
 Sign-in activity from Switzerland was also identified during the investigation. This activity was inconsistent with Natasha's normal behaviour because she worked in Melbourne, had not travelled recently and did not use a VPN. 
 
@@ -81,7 +81,7 @@ The threat actor performed the following actions after obtaining access:
 
 - Modified the rule's sender condition shortly after sending the first malicious email. 
 
-- Used Natasha's mailbox to send two unauthorised emails concerning invoice W D L - 2 0 2 6 - 0 0 4 8 . 
+- Used Natasha's mailbox to send two unauthorised emails concerning invoice WDL-2026-0048. 
 
 - Used an existing business relationship and invoice conversation to make the payment request appear legitimate. 
 
@@ -203,15 +203,15 @@ The order of the password reset and session revocation was important. Resetting 
 
 |**Type**|**Value**|**Context**|
 |---|---|---|
-|Compromised<br>account|n a t a s h a . r o m a n e n k o @ w d l a b s . c o m . a u|WDLabs user account|
-|Phishingsender|b b e n s o n 1 7 8 9 1 @ o u t l o o k . c o m|Sender of June Remittance Advice|
-|Phishing subject|J u n e R e m i t t a n c e A d v i c e|Initial phishing message|
-|Confirmed initial IP|5 4 . 7 9 . 1 7 9 . 9 2|First unauthorised sign-in and associated<br>phishing evidence|
-|Malicious session ID|0 0 5 c c d e a - 9 6 4 a - c 0 6 8 - 1 8 1 e - c 9 4 0 2 d 6 d f 2 7 2|Used to correlate Microsoft 365 activity|
+|Compromised<br>account|natasha.romanenko@wdlabs.com.au|WDLabs user account|
+|Phishingsender|bbenson17891@outlook.com|Sender of June Remittance Advice|
+|Phishing subject|June Remittance Advice|Initial phishing message|
+|Confirmed initial IP|54.79.179.92|First unauthorised sign-in and associated<br>phishing evidence|
+|Malicious session ID|005ccdea-964a-c068-181-c9402d6df272|Used to correlate Microsoft 365 activity|
 |Inbox rule|.|Moved selected messages to Conversation<br>History|
-|Fraud-related subject|R e : I n v o i c e W D L - 2 0 2 6 - 0 0 4 8|Used in unauthorised sent messages|
-|Ruleaddress|a c m e b u s i n e s s @ g m a i l . c o m|Original rule condition|
-|Modified rule and<br>recipient address|a c m e b u s i n e s s 2 0 2 6 @ g m a i l . c o m|Modified rule condition and sent-email recipient|
+|Fraud-related subject|R e : Invoice WDL-2026-0048|Used in unauthorised sent messages|
+|Ruleaddress|acmebusiness@gmail.com|Original rule condition|
+|Modified rule and<br>recipient address|acmebusiness2026@gmail.com|Modified rule condition and sent-email recipient|
 
 
 
@@ -343,7 +343,7 @@ OfficeActivity
 <img width="1039" height="504" alt="image" src="https://github.com/user-attachments/assets/ec7998c4-53ee-458a-ad2a-74e16d604193" />
 
 
-
+---
 
 Bulk IP Check:
 
