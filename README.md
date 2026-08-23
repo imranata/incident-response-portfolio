@@ -44,6 +44,13 @@ The investigations here demonstrate practical ability in:
 | 003 | Attempt to clear event log|
 | 004 | Mimikatz credential theft tool|
 
+### Business Email Compromise Investigations
+
+| # | Case Name |
+|---|---|
+| 001 | Project Como| 
+
+
 ---
 
 ## Tools & Environment
