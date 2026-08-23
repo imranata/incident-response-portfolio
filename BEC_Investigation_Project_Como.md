@@ -44,7 +44,7 @@ All timestamps are in GMT.
 |2026-06-08 08:08:00|Phishing email received|Email from bbenson17891@outlook.com with the subject June<br>Remittance Advice was delivered to Natasha's Junk Email folder.|
 |2026-06-08 08:10:08|Phishing email accessed|The message was accessed by the legitimate mailbox user.|
 |2026-06-08 08:12:49|Initial unauthorised access|First confirmed unauthorised sign-in from 54.79.179.92|
-|2026-06-08 08:47:40 to<br>2026-06-12 08:55:57|Mailbox access|During malicious mailbox activity a total of 30 mail items were<br>accessed.|
+|2026-06-08 08:47:40 to<br>2026-06-12 08:55:57|Mailbox access|During this malicious mailbox activity a total of 30 mail items were<br>accessed.|
 |2026-06-08 08:48:27|File downloads began|Start of a download sequence involving 62 files.|
 |2026-06-08 09:13:33|File downloads ended|The 62-file download sequence ended.|
 |2026-06-10 13:02:51|Inbox rule created|Rule  named "." created  to  move messages  from <br> acmebusiness@gmail.com to the Conversation History folder. This<br>corresponds to 23:02:51 AEST.|
