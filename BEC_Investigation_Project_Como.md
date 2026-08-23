@@ -333,9 +333,9 @@ OfficeActivity
 
 | where ClientIP in (badIPs) or AADSessionId == "005ccdea-964a-c068-181e-c9402d6df272"
 
-|summarize count() by Operation
+| summarize count() by Operation
 
-|sort by count_
+| sort by count_
 
 
 
